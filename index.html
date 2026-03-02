@@ -6,116 +6,146 @@
 <title>Orvexa TV - Premium IPTV Player</title>
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f0f14, #1c1f2b);
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
     color: white;
     text-align: center;
 }
 
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 .container {
     padding: 80px 20px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
 }
 
 h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 56px;
+    background: linear-gradient(90deg, #00f5ff, #00ffcc, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
 }
 
 .tagline {
-    font-size: 20px;
-    color: #aaa;
+    font-size: 22px;
+    color: #ddd;
     margin-bottom: 40px;
 }
 
 .button {
     display: inline-block;
-    padding: 16px 40px;
-    background: #1e90ff;
-    color: white;
-    text-decoration: none;
+    padding: 18px 45px;
+    background: linear-gradient(90deg, #00f5ff, #1e90ff);
+    color: black;
     font-weight: bold;
-    border-radius: 10px;
     font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
     transition: 0.3s;
 }
 
 .button:hover {
-    background: #3aa0ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00f5ff;
 }
 
 .price {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
     color: #00ffcc;
 }
 
 .section {
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .features {
-    text-align: left;
-    max-width: 600px;
-    margin: auto;
-    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.features li {
-    margin-bottom: 12px;
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
 }
 
 .screenshot {
     width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
-    margin-top: 20px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    max-width: 700px;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
 
 .faq {
     text-align: left;
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
+    margin-top: 40px;
 }
 
 .faq h3 {
-    margin-bottom: 5px;
-    margin-top: 20px;
+    margin-top: 25px;
+    color: #00ffcc;
 }
 
 .footer {
-    margin-top: 80px;
+    margin-top: 100px;
     font-size: 14px;
-    color: #777;
+    color: #aaa;
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
     <h1>Orvexa TV</h1>
-    <div class="tagline">Premium IPTV Player for Android TV</div>
+    <div class="tagline">Premium IPTV Player for Android TV – Smooth • Powerful • 4K HDR</div>
 
     <a class="button" href="YOUR_DOWNLOAD_LINK_HERE">Download Now</a>
 
     <div class="price">
-        Launch Offer: ₹199 (Regular ₹349)
+        🔥 Launch Offer ₹199 (Regular ₹349)
     </div>
 
     <div class="section">
-        <h2>Features</h2>
-        <ul class="features">
-            <li>✔ Supports M3U Playlists & Streaming URLs</li>
-            <li>✔ Up to 4K HDR Streaming</li>
-            <li>✔ Optimized for Large Playlists</li>
-            <li>✔ Smooth Android TV Remote Navigation</li>
-            <li>✔ Clean, Ad-Free Experience</li>
-        </ul>
+        <h2>Why Choose Orvexa TV?</h2>
+        <div class="features">
+            <div class="card">✔ Supports M3U Playlists & Streaming URLs</div>
+            <div class="card">✔ Up to 4K HDR Streaming</div>
+            <div class="card">✔ Optimized for Large Playlists</div>
+            <div class="card">✔ Smooth Android TV Remote Navigation</div>
+            <div class="card">✔ Fast Channel Switching</div>
+            <div class="card">✔ Clean, Ad-Free Experience</div>
+        </div>
     </div>
 
     <div class="section">
@@ -126,14 +156,14 @@ h1 {
     <div class="section">
         <h2>FAQ</h2>
         <div class="faq">
-            <h3>Does it provide IPTV content?</h3>
+            <h3>Does Orvexa TV provide IPTV content?</h3>
             <p>No. Orvexa TV is a player that supports user-provided legal playlists and streaming URLs.</p>
 
             <h3>Is it optimized for Android TV?</h3>
-            <p>Yes. Built specifically for Android TV with smooth remote navigation and performance tuning.</p>
+            <p>Yes. Built specifically for Android TV hardware with smooth remote navigation.</p>
 
-            <h3>Does it support 4K?</h3>
-            <p>Yes, supports up to 4K HDR streaming depending on your stream source and device capability.</p>
+            <h3>Does it support 4K HDR?</h3>
+            <p>Yes, depending on your stream source and device capability.</p>
         </div>
     </div>
 
